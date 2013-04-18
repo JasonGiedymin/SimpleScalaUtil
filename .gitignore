@@ -1,0 +1,49 @@
+
+# Global .gitignore
+
+## Dirs
+node_modules
+tmp
+temp
+
+## Generic
+*~
+*.lock
+*.DS_Store
+*.swp
+
+lib-cov
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+
+pids
+logs
+results
+
+## Java
+*.class
+target/
+
+## Python
+*.pyc
+
+## NodeJS Specific
+.migrate
+npm-debug.log
+
+## Misc
+.sass-cache
+
+
+## Intellij
+.idea
+.idea_modules
+.classpath
+.project
+project/target
+project/project

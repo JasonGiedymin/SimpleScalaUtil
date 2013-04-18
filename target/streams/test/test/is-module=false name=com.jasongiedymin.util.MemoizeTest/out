@@ -1,5 +1,0 @@
-[0m[[0minfo[0m] [0m[32mMemoizeTest:[0m[0m
-[0m[[0minfo[0m] [0m[32mTest function works within 2100 Milliseconds [0m[0m
-[0m[[0minfo[0m] [0m[32mSingle arg memoization [0m[0m
-[0m[[0minfo[0m] [0m[32m  works by calling addTenCached and spending 2000 Milliseconds on first execution [0m[0m
-[0m[[0minfo[0m] [0m[32m    then less than 100 Milliseconds on further execution [0m[0m
