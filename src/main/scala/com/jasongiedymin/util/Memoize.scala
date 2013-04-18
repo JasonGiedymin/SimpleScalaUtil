@@ -27,11 +27,9 @@ object Memoize {
     private[this] val cache = mutable.Map.empty[T, R]
 
     def apply(x: T): R = gauge.calls.time {
-      //      println("key: %s" format x)
       cache.get(x) match {
         case Some(r) =>
           gauge.hits += 1
-          //          println("hit1")
           r
         case None =>
           cache += (x -> f(x))
@@ -52,15 +50,11 @@ object Memoize {
 
     def apply(x: T1, y: T2): R = gauge.calls.time {
       val key = (x, y)
-      //      println("key: %s" format key)
-      //      println("size: %s" format  cache.size)
       cache.get(key) match {
         case Some(v) =>
           gauge.hits += 1
-          //          println("hit2")
           v
         case None =>
-          //          println("none found for size: %s, key: %s" format (cache.size, key))
           cache += (key -> f(x, y))
           cache(key)
       }
@@ -80,11 +74,9 @@ object Memoize {
 
     def apply(x: T1, y: T2, z: T3): R = gauge.calls.time {
       val key = (x, y, z)
-      //      println("key: %s" format key)
       cache.get(key) match {
         case Some(v) =>
           gauge.hits += 1
-          //          println("hit")
           v
         case None =>
           cache += (key -> f(x, y, z))
@@ -106,11 +98,9 @@ object Memoize {
 
     def apply(a: T1, b: T2, c: T3, d: T4): R = gauge.calls.time {
       val key = (a, b, c, d)
-      //      println("key: %s" format key)
       cache.get(key) match {
         case Some(v) =>
           gauge.hits += 1
-          //          println("hit")
           v
         case None =>
           cache += (key -> f(a, b, c, d))
