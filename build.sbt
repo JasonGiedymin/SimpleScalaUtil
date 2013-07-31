@@ -9,6 +9,7 @@ resolvers += "Typesafe Repository" at "http://repo.typesafe.com/typesafe/release
 resolvers += "OSS Sonatype Public" at "https://oss.sonatype.org/content/groups/public/"
 
 libraryDependencies ++= Seq(
+      "com.novus" %% "salat" % "1.9.2-SNAPSHOT", // snapshot with 2.1x support
       "org.scalatest" % "scalatest_2.10" % "1.9.1" % "test",
       "com.yammer.metrics" % "metrics-core" % "2.2.0",
       "com.yammer.metrics" % "metrics-scala_2.9.1" % "2.2.0"
