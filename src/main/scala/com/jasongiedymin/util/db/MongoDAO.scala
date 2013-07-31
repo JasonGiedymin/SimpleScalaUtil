@@ -14,9 +14,9 @@ import com.novus.salat.dao.ModelCompanion
  * Class to use in place of SalatDAO so that the following instead
  * product 'Future'(s):
  *
- *  - findOne
- *  - find
- *  - findOneById
+ *  - findOne -> findOneFuture
+ *  - find -> findFuture
+ *  - findOneById -> findOneByIdFuture
  *
  * @param collection
  * @param mot
